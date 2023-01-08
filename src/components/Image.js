@@ -20,6 +20,12 @@ function Image() {
         navigate('/Dashboard')
       }
 
+      const Click = ()=>{
+        localStorage.clear()
+        navigate('/')
+      }
+
+
       const[data , setData] = useState({})
 
     const getData = async()=>{
@@ -42,7 +48,7 @@ function Image() {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link eventKey={2} onClick={handleClick} style={{color:"white" ,  fontWeight:"bold"}}>
+            <Nav.Link eventKey={2} onClick={Click} style={{color:"white" ,  fontWeight:"bold"}}>
             Logout
             </Nav.Link>
           </Nav>
